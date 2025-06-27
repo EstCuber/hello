@@ -1,0 +1,7 @@
+## Interface: 110002
+## Version: 0.0.2
+## Title: Hello
+## Notes: My first addon
+## Author: Conditor
+
+hello.lua
