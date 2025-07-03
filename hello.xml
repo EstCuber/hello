@@ -1,0 +1,82 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+
+
+    <Frame name="hello_panel" parent="UIParent" hidden="true" movable="true" enableMouse="true" clampedToScreen="true" frameStrata="MEDIUM">
+        <Size x="800" y="600"/>
+        <Anchors>
+            <Anchor point="CENTER"/>
+        </Anchors>
+
+        <Layers>
+
+            <Layer level="BACKGROUND">
+
+                <Texture name="$parentBackground" file="Interface/DialogFrame/UI-DialogBox-Background">
+                    <Anchors>
+                        <Anchor point="TOPLEFT"/>
+                        <Anchor point="BOTTOMRIGHT"/>
+                    </Anchors>
+                </Texture>
+            </Layer>
+            
+
+            <Layer level="ARTWORK">
+
+                <Texture name="$parentFirstPicture" file="Interface/AddOns/hello/Textures/cat1.jpg" hidden="true">
+                    <Size x="400" y="400"/>
+                    <Anchors>
+                        <Anchor point="TOPRIGHT" x="-40" y="-50"/>
+                    </Anchors>
+                </Texture>
+                <Texture name="$parentSecondPicture" file="Interface/AddOns/hello/Textures/cat2.jpg" hidden="true">
+                    <Size x="400" y="400"/>
+                    <Anchors>
+                        <Anchor point="TOPRIGHT" x="-40" y="-50"/>
+                    </Anchors>
+                </Texture>
+                <Texture name="$parentThirdPicture" file="Interface/AddOns/hello/Textures/cat3.jpg" hidden="true">
+                    <Size x="400" y="400"/>
+                    <Anchors>
+                        <Anchor point="TOPRIGHT" x="-40" y="-50"/>
+                    </Anchors>
+                </Texture>
+
+                <FontString name="$parentTitle" font="GameFontNormalLarge" text="Котечки">
+                    <Anchors>
+                        <Anchor point="TOP" x="0" y="-18"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+
+        <Frames>
+
+            <Button name="$parentFirstButton" inherits="UIPanelButtonTemplate" text="Первая картинка">
+                <Size x="160" y="28"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" x="30" y="-50"/>
+                </Anchors>
+            </Button>
+            <Button name="$parentSecondButton" inherits="UIPanelButtonTemplate" text="Вторая картинка">
+                <Size x="160" y="28"/>
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="$parentFirstButton" relativePoint="BOTTOM" x="0" y="-10"/>
+                </Anchors>
+            </Button>
+            <Button name="$parentThirdButton" inherits="UIPanelButtonTemplate" text="Третья картинка">
+                <Size x="160" y="28"/>
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="$parentSecondButton" relativePoint="BOTTOM" x="0" y="-10"/>
+                </Anchors>
+            </Button>
+
+
+            <Button name="$parentExitButton" inherits="UIPanelButtonTemplate" text="Закрыть">
+                <Size x="100" y="28"/>
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT" x="-15" y="15"/>
+                </Anchors>
+            </Button>
+        </Frames>
+    </Frame>
+</Ui>
